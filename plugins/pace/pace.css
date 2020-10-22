@@ -56,11 +56,12 @@
 }
 
 @media (max-width: 767px) {
-	.pace .pace-activity {
+  .pace .pace-activity {
     height: 14px;
     right: 15px;
     top: 15px;
-    width: 14px;  
+    width: 14px;
+
   }
 }
 
