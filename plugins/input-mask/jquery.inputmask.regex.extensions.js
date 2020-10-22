@@ -72,7 +72,7 @@ Allows for using regular expressions as a mask
                                         }
                                         break;
                                     default:
-                                        // Vertical bar (alternator) 
+                                        // Vertical bar (alternator)
                                         // ^ or $ anchor
                                         // Dot (.)
                                         // Literal character sequence
@@ -98,9 +98,9 @@ Allows for using regular expressions as a mask
                             }
                             for (var mndx = 0; mndx < token["matches"].length; mndx++) {
                                 var matchToken = token["matches"][mndx];
-                                if (matchToken["isGroup"] == true) {
+                                if (matchToken["isGroup"] === true) {
                                     isvalid = validateRegexToken(matchToken, true);
-                                } else if (matchToken["isQuantifier"] == true) {
+                                } else if (matchToken["isQuantifier"] === true) {
                                     matchToken = matchToken["matches"][0];
                                     var quantifierMax = opts.quantifierFilter.exec(matchToken)[0].replace("}", "");
                                     var testExp = regexPart + "{1," + quantifierMax + "}"; //relax quantifier validation
@@ -110,7 +110,7 @@ Allows for using regular expressions as a mask
                                     var exp = new RegExp("^(" + testExp + ")$");
                                     isvalid = exp.test(bufferStr);
                                     regexPart += matchToken;
-                                } else if (matchToken["isLiteral"] == true) {
+                                } else if (matchToken["isLiteral"] === true) {
                                     matchToken = matchToken["matches"][0];
                                     var testExp = regexPart, openGroupCloser = "";
                                     for (var j = 0; j < openGroupCount; j++) {

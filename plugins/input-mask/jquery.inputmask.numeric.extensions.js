@@ -149,7 +149,7 @@ Optional extensions on the jquery.inputmask base
                             }
                         }
 
-                        if (isValid != false && !strict && chrs != opts.radixPoint) {
+                        if (isValid !== false && !strict && chrs !== opts.radixPoint) {
                             var newPos = opts.postFormat(buffer, pos, false, opts);
                             return { "pos": newPos };
                         }

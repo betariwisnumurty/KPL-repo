@@ -398,7 +398,7 @@ Optional extensions on the jquery.inputmask base
 
                             var tmp = parseInt(chrs, 10);
 
-                            if (tmp == 24) {
+                            if (tmp === 24) {
                                 buffer[pos + 5] = "a";
                                 buffer[pos + 6] = "m";
                             } else {
